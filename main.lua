@@ -1,5 +1,5 @@
 -- Debug
-START_SCENE = "room"
+START_SCENE = "intro"
 
 -- Load scenes and start with scene room
 local SceneryInit = require("libs.scenery")
