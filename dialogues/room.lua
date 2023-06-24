@@ -6,109 +6,133 @@ local script = Ero(function()
     background "img/bedroom_1.png"
 
     name "HEROE"
-    msg "...-- ...-- ..."
-    msg "*baille*"
-    msg "Oh la vache,-- j'ai dormi comme une pierre."
-    msg "C'était SI LONG pour rentrer de [GRANDE VILLE]..."
-    msg "...-- Ça fait bizarre de rentrer, quand même."
+    msg "... -- ... -- ..."
+    -- msg "*baille*"
+    msg "Damn, talk about a nap."
+    msg "..."
+    msg "That was a long ride home."
 
     name ""
-    msg "*toc toc*"
+    msg "Honey?"
 
     name "HEROE"
-    msg "...-- Ouaaais ?"
-    
-    name "Maman"
-    msg "Bonjour ma louloute !"
-    msg "Alors, fatiguée de la vie de doctorante ?"
+    msg "Yeah?"
+
+    name "Mom"
+    msg "Are you awake?"
 
     name "HEROE"
-    msg "Mamaaan... Je suis en troisième année, je ne suis pas doctorante."
+    msg "Yeah I just woke up."
 
-    name "Maman"
-    msg "Oui c'est vraie, tu es professeur !"
-
-    name "HEROE"
-    msg "Arrête hahaha."
-
-    name "Maman"
-    msg "Tu as bien dormi ?"
-    msg "Ça devait être long, toutes ces heures de train."
+    name "Mom"
+    msg "Dear god, finally! I was starting to think you were dead."
 
     name "HEROE"
-    msg "J'ai bien dormi ouais !-- Comme un caillou !"
+    msg "Not yet, you still have a bit of time to worry about that."
 
-    name "Maman"
-    msg "C'est parce que tu es dans ton petit chez toi hihi."
-    msg "Tu sais, ça nous fait vraiment du bien de t'avoir à la maison, ton père et moi."
-    
+    name "Mom"
+    msg "What is it that they make you do in college that you have to take a three hours nap the minute you get back here?"
+
     name "HEROE"
-    msg "Alors je suis contente."
-    
-    name "Maman"
-    msg "Tu sais, tu n'es pas obligée de rentrer juste les vacances, hein ?-- Tu peux aussi rentrer un peu plus souvent."
-    
+    msg "I guess the end of the semester was quite heavy."
+
+    name "Mom"
+    msg "My poor baby...-- I'm glad you're back so that I can take care of you better that that."
+
     name "HEROE"
-    msg "Oui, je sais, je sais.-- Mais je fais ce que je peux hein !"
-    
-    name "Maman"
-    msg "On sait que tu es très occupée avec tes études et tout...-- Sinon, nous aussi on peut venir si tu préfères."
-    
-    name "HEROE"
+    msg "It's okay mom, I was just tired."
     msg "..."
+    msg "But I'm glad to be home as well."
+
+    name "Mom"
+    msg "Well, you know you don't have to wait the whole year for that, uh?"
+
+    name "HEROE"
+    msg "I know, I know.-- I'll come by more often next semester."
+
+    name "Mom"
+    msg "I heard that one before."
+
+    name "HEROE"
+    msg "Mom..."
+
+    name "Mom"
+    msg "I'm sorry honey, I'm just messing with you now that I can."
+    msg "So, what are your plans for this summer?"
+
+    name "HEROE"
+    msg "I haven't thought about it that much actually.-- I guess I'll just...-- I don't know, relax?"
+
+    name "Mom"
+    msg "Now that's a great idea sweetie."
+
+    name "HEROE"
+    msg "There's not much else to do around here anyway."
+
+    name "Mom"
+    msg "What do you mean not much to do?-- You used to always be out with your friends in high school, Dad and I had to fight to even have you home for dinner twice a week."
+
+    name "HEROE"
+    msg "Hey that's not even true, I was here every...-- like...--- Sunday night."
+
+    name "Mom"
+    msg "Yeah, my point exactly."
+
+    name "HEROE"
+    msg "Mom, you're doing it again..."
+
+    name "Mom"
+    msg "Yeah, yeah, your old mom is not cool enough for you anymore now that you're in college, I get it."
     
-    name "Maman"
-    msg "Si tu en as envie bien sûr."
-    
     name "HEROE"
-    msg "... Oui bien sûr."
+    msg "Come on, that's not true, you're at least as cool as before college."
 
-    name "Maman"
-    msg "..."
-    msg "Et sinon, tu as un peu des nouvelles de tes anciens camarades ?-- Tu étais tout le temps dehors avec eux à un moment."
+    name "Mom"
+    msg "Thank you honey."
+    msg "Anyway, can't you try to see your old friends while you're here? They must have missed you and your cool mom."
 
     name "HEROE"
-    msg "On a un peu perdu contact lorsque tout le monde est parti tu sais."
+    msg "Well ...-- We don't really talk anymore actually.-- I don't even know if they're still around."
 
-    name "Maman"
-    msg "Oui c'est normal.-- Tu sais que GRUL travaille dans le garage de ses parents, juste à côté ?"
-
-    name "HEROE"
-    msg "Ah ouais ?-- Elle voulait pas partir en Pologne ou un truc du genre à un moment ?"
-
-    name "Maman"
-    msg "Peut-être.-- Mais en tout cas pour l'instant elle bosse dur...-- Mais qu'est-ce qu'elle est efficace !-- Un amour."
-    msg "L'autre jour, j'avais un bruit bizarre dans la Twingo, je suis allé la voir le main, l'après-midi je récupérais la voiture !"
+    name "Mom"
+    msg "I know that Alan's kid is still here, she's working at the garage with him."
 
     name "HEROE"
-    msg "Ah ouais."
+    msg "Oh yeah right, I forgot about that."
 
-    name "Maman"
-    msg "Et l'autre garçon, très gentil, très avenant...-- Comment il s'appelait déjà ? Celui qui habite près de la Poste ?"
-
-    name "HEROE"
-    msg "Tu veux dire JLOM ?"
-
-    name "Maman"
-    msg "Ouiii--, c'est ça !-- JLOM !-- Quel brillant jeune homme.-- Il ferait un bon parti pour t-"
+    name "Mom"
+    msg "And she works real hard, I tell you.-- Dad had a flat tire the other day, he was in and out in less than half an hour."
 
     name "HEROE"
-    msg "Maman."
+    msg "That's good for her, I guess."
 
-    name "Maman"
-    msg "Pardon.-- Mais il est rentré un peu avant toi d'ailleurs."
-
-    name "HEROE"
-    msg "Ah ouais."
-
-    name "Maman"
-    msg "Peut-être ce que tu pourrais en profiter pour les revoir ?-- Si déjà tu es dans le coin, je veux dire."
+    name "Mom"
+    msg "And what was the name of that other kid, the blonde one?"
 
     name "HEROE"
-    msg "...-- Pourquoi pas, en vrai..."
+    msg "JLOM?"
 
-    name "Maman"
-    msg "Bon, je te laisse te reposer encore un peu.-- Je viens te chercher pour manger !"
+    name "Mom"
+    msg "Yeah JLOM! Do you have any news from him?"
+
+    name "HEROE"
+    msh "No, I think he's in college as well, to become a doctor,-- or surgeon,-- or something like this."
+
+    name "Mom"
+    msg "Then he must be home for the summer as well. You should send them a message, I'm sure they'd be happy to see you."
+
+    name "HEROE"
+    msg "I don't know, it feels a bit weird."
+
+    name "Mom"
+    msg "Honey I assure you there's nothing weird about that."
+    msg "I'll let you rest a bit more, I still have a bit of cooking to do for tonight."
+
+    name "HEROE"
+    msg "Do you need help with that?"
+
+    name "Mom"
+    msg "No no! Let me cook for my baby girl while I can, you take some rest."
 
 end):defineAttributes({'name', 'avatar', 'background'})
 
