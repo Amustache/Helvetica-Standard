@@ -79,6 +79,7 @@ function scene:load()
             onstatechange = function(self, event, from, to) end,
             on1 = function(self, event, from, to)
                 reveal_hidden({})
+                Talkies.say("hehehe", "hohooho")
             end,
             on2 = function(self, event, from, to)
                 reveal_hidden("a")
@@ -137,10 +138,11 @@ end
 
 local timer = 0
 function scene:update(dt)
-    -- Starts minigame once dialogue is done
-    if Talkies.isOpen() == false and minigame_playing == "" then
+    -- Unlock Talkies when text is available
+    if Talkies.isOpen() then
+        minigame_playing = ""
+    else
         minigame_playing = "labyrinthe"
-        print("minigame:\t " .. minigame_playing)
     end
 
     if minigame_playing == "labyrinthe" then
