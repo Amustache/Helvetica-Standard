@@ -116,7 +116,7 @@ local script = Ero(function()
     msg "Yeah JLOM! Do you have any news from him?"
 
     name "Megan"
-    msh "No, I think he's in college as well, to become a doctor,-- or surgeon,-- or something like this."
+    msg "No, I think he's in college as well, to become a doctor,-- or surgeon,-- or something like this."
 
     name "Mom"
     msg "Then he must be home for the summer as well. You should send them a message, I'm sure they'd be happy to see you."
