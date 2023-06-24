@@ -12,6 +12,10 @@ local current_contact = ""
 local offset = 0
 local scroll_speed = 10
 
+hand = {
+    pressed = false,
+}
+
 function scene:load()
     print("load:\t\t phone")
 
@@ -22,36 +26,25 @@ function scene:load()
     dialogues.nextMessage()
 
     -- Specific graphics
-    hand_png = love.graphics.newImage("placeholders/hand.png")
-    contact_png = love.graphics.newImage("placeholders/contact.png")
-    contact_found_png = love.graphics.newImage("placeholders/contact_found.png")
+    contact_png = love.graphics.newImage("img/phone_contact.png")
+    contact_selector_png = love.graphics.newImage("img/phone_selector.png")
+    contact_found_png = love.graphics.newImage("img/phone_ok.png")
 
     -- Specific SFX
     success = love.audio.newSource("sfx/success.wav", "static")
     failure = love.audio.newSource("sfx/failure.wav", "static")
 
-    -- Things
-    hand = {
-        x = 0,
-        y_low = 50,
-        y_up = 350,
-        y_mid = (50 + 350) / 2,
-        y = (50 + 350) / 2,
-        pressed = false,
-        finger_x = 150,
-        finger_y = 110,
-        finger_size = 16
-    }
-
-    box_target = {
-        x1 = SCALING * (hand.finger_x - contact_found_png:getWidth() / 2),
-        y1 = SCALING * (hand.finger_y - contact_found_png:getHeight() / 2),
-        x2 = SCALING * (hand.finger_x + contact_found_png:getWidth() / 2),
-        y2 = SCALING * (hand.finger_y + contact_found_png:getHeight() / 2)
+    contact_selector = {
+        x = SCALING * 89,
+        y = SCALING * 78,
+        w = SCALING * contact_selector_png:getWidth(),
+        h = SCALING * contact_selector_png:getHeight(),
     }
 end
 
-local function is_a_in_b(a_x1, a_y1, a_x2, a_y2, b_x1, b_y1, b_x2, b_y2)
+local function is_a_in_b(a, b)
+    local a_x1, a_y1, a_x2, a_y2 = a.x, a.y, a.x + a.w, a.y + a.h
+    local b_x1, b_y1, b_x2, b_y2 = b.x, b.y, b.x + b.w, b.y + b.h
     if a_x1 > b_x1 and a_x2 < b_x2 and a_y1 > b_y1 and a_y2 < b_y2 then
         return true
     else
@@ -61,11 +54,11 @@ end
 
 local function draw_contacts(offset) -- top_visible is between 0 and #prenoms
     for i = 1, #contacts do
-        local x = 464 -- TODO, HARDCODED
-        local y = 224 + (i - 1) * (contact_png:getHeight() * SCALING) - offset -- TODO, HARDCODED
+        local x = SCALING * 89 -- TODO, HARDCODED
+        local y = SCALING * 36 + (i - 1) * (contact_png:getHeight() * SCALING) - offset -- TODO, HARDCODED
 
         love.graphics.draw(contact_png, x, y, 0, SCALING)
-        love.graphics.print(contacts[i], 21 + x, 10 + y) -- TODO, HARDCODED
+        love.graphics.print(contacts[i], 100 + x, 15 + y) -- TODO, HARDCODED
 
         for j = 1, #found do
             if contacts[i] == found[j] then
@@ -73,17 +66,20 @@ local function draw_contacts(offset) -- top_visible is between 0 and #prenoms
             end
         end
 
-        local x1 = 10 + x
-        local y1 = 10 + y
-        local x2 = x + SCALING * contact_png:getWidth() - 10
-        local y2 = y + SCALING * contact_png:getHeight() - 10
+        local box = {
+            x = 42 + x,
+            y = 42 + y,
+            w = SCALING * contact_png:getWidth() - 42 * 2,
+            h = SCALING * contact_png:getHeight() - 42 * 2,
+        }
 
         -- Debug
         love.graphics.setColor(0, 0, 1)
-        love.graphics.rectangle("line", x1, y1, x2 - x1, y2 - y1)
+        love.graphics.rectangle("line", box.x, box.y, box.w, box.h)
         love.graphics.setColor(255, 255, 255)
 
-        if is_a_in_b(x1, y1, x2, y2, box_target.x1, box_target.y1, box_target.x2, box_target.y2) then
+        if is_a_in_b(box, contact_selector) then
+            print(current_contact)
             current_contact = contacts[i]
         end
     end
@@ -92,20 +88,19 @@ end
 function scene:draw()
     draw_contacts(offset)
 
+    love.graphics.draw(contact_selector_png, contact_selector.x, contact_selector.y, 0, SCALING)
+
     love.graphics.draw(current_bg, 0, 0, 0, SCALING)
 
     if hand.pressed then
-        love.graphics.draw(hand_png, hand.x, hand.y, 0, SCALING - 0.2) -- TODO HARDCODED
+        -- love.graphics.draw(hand_png, hand.x, hand.y, 0, SCALING - 0.2) -- TODO HARDCODED
     else
-        love.graphics.draw(hand_png, hand.x, hand.y, 0, SCALING)
+        -- love.graphics.draw(hand_png, hand.x, hand.y, 0, SCALING)
     end
 
     -- Debug
-    -- Finger
     love.graphics.setColor(1, 0, 0)
-    love.graphics.circle("line", SCALING * hand.finger_x, SCALING * hand.finger_y, hand.finger_size)
-    love.graphics.rectangle("line", box_target.x1, box_target.y1, box_target.x2 - box_target.x1,
-        box_target.y2 - box_target.y1)
+    love.graphics.rectangle("line", contact_selector.x, contact_selector.y, contact_selector.w, contact_selector.h)
     love.graphics.setColor(255, 255, 255)
 
 end

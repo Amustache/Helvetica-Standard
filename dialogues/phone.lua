@@ -2,8 +2,8 @@ local Ero = require('libs.erogodic')
 
 local script = Ero(function()
   name ""
-  avatar "placeholders/avatar.png"
-  background "placeholders/phone_bg.png"
+  avatar ""
+  background "img/phone_bg.png"
   next_scene ""
 
   name "HEROE"
