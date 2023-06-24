@@ -1,11 +1,13 @@
 -- Globals...
+current_bg_name = ""
 current_bg = nil
 next_scene = nil
 dialogues = require('libs.dialogue_helper')
+minigame_playing = ""
 
 -- Load scenes and start with intro
 local SceneryInit = require("libs.scenery")
-local scenery = SceneryInit("intro")
+local scenery = SceneryInit("phone")
 
 Talkies = require("libs.talkies")
 -- Default configuration for Talkies
@@ -37,13 +39,27 @@ function love.load()
     scenery:load()
 end
 
+function minigame_keys_phone(key)
+    print("hiii")
+    if minigame_playing then
+        if key == "space" then print("space") end
+        if key == "up" then print("up") end
+        if key == "down" then print("down") end
+    end
+end
+
 function love.keypressed(key)
     if key == "escape" then love.event.quit() end
-    -- if key == "c" then Talkies.clearMessages() end
-    -- if key == "m" then Talkies.say("Title", {"Message one", "two", "and three..."}, {onstart=function() end}) end
-    if key == "space" or key == 'return' or key == 'e' or key == 'z' then Talkies.onAction() end
-    if key == "up" then Talkies.prevOption() end
-    if key == "down" then Talkies.nextOption() end
+
+    if minigame_playing == "" then  -- Dialogue
+        -- if key == "c" then Talkies.clearMessages() end
+        -- if key == "m" then Talkies.say("Title", {"Message one", "two", "and three..."}, {onstart=function() end}) end
+        if key == "space" or key == 'return' or key == 'e' or key == 'z' then Talkies.onAction() end
+        if key == "up" then Talkies.prevOption() end
+        if key == "down" then Talkies.nextOption() end
+    else  -- Minigame
+        minigame_keys_phone(key)
+    end
 end
   
 function love.update(dt)

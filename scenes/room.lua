@@ -2,7 +2,7 @@
 local scene = {}
 
 function scene:load()
-    print("load room")
+    print("load:\t\t room")
     
     -- Load dialogues for that scene
     local script = require('dialogues.room')

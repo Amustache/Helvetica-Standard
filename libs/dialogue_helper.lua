@@ -1,7 +1,7 @@
 local dialogues = {}
 
 function dialogues.init(script)
-  print("new script!")
+  print("dialogue:\t\t new script!")
     dialogues.script = script
 end
 
@@ -20,13 +20,14 @@ end
 displayMessageNode = function(node)
 -- Erogodic script is over.
   if node == nil then
-    print("end of conversation!")
+    print("dialogue:\t\t end of conversation!")
     return
   end
 
   -- Background
-  if node.background then
-    print("new background: " .. node.background)
+  if node.background and current_bg_name ~= node.background then
+    print("dialogue:\t\t new background: " .. node.background)
+    current_bg_name = node.background
       current_bg = love.graphics.newImage(node.background)  -- Not optimal...
   end
 
@@ -46,7 +47,7 @@ displayMessageNode = function(node)
 
   -- Next scene
   if node.next_scene and node.next_scene ~= '' then
-    print("next scene: " .. node.next_scene)
+    print("dialogue:\t\t next scene: " .. node.next_scene)
       next_scene = node.next_scene
   end
 end

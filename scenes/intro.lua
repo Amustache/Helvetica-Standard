@@ -2,7 +2,7 @@
 local scene = {}
 
 function scene:load()
-    print("load intro")
+    print("load:\t\t intro")
 
     -- Load dialogues for that scene
     local script = require('dialogues.intro')
