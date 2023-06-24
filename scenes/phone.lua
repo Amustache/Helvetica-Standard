@@ -1,5 +1,6 @@
 -- Scene
 local scene = {}
+next_scene = "phone_win"
 
 -- Contacts
 local contacts = require('prenoms')
@@ -21,6 +22,7 @@ function scene:load()
 
     -- Load dialogues for that scene
     local script = require('dialogues.phone')
+    local script_win = require('dialogues.sample')
     dialogues.init(script)
 
     dialogues.nextMessage()
@@ -162,8 +164,6 @@ function scene:update(dt)
                     love.audio.play(failure)
                 end
             end
-
-            -- print(is_a_in_b())
         end
 
         if not key_pressed then
@@ -173,6 +173,11 @@ function scene:update(dt)
             --     elseif hand.y > hand.y_mid then
             --         hand.y = hand.y - factor
             --     end
+        end
+
+        if #goals == 1 then
+            minigame_playing = ""
+            self.setScene(next_scene)
         end
     end
 end
