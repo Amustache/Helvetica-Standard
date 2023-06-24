@@ -4,13 +4,13 @@ local script = Ero(function()
   name ""
   avatar ""
   background ""
-  next_scene "room"
+  next_scene ""
 
   -- 1
   background "placeholders/placeholder1.png"
   msg " Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-msg "Ut porta fermentum lectus, eu dictum enim ultrices semper."
-msg "Ut in scelerisque lorem."
+  msg "Ut porta fermentum lectus, eu dictum enim ultrices semper."
+  msg "Ut in scelerisque lorem."
 
   -- 2
   background "placeholders/placeholder2.png"
@@ -25,6 +25,7 @@ msg "Ut in scelerisque lorem."
   msg "Mauris sagittis nunc augue, in euismod augue elementum sit amet."
   msg "Pellentesque rhoncus risus nec dui rutrum euismod."
   msg "Sed tincidunt quis diam vel elementum."
+  next_scene "room"
   msg "Etiam bibendum turpis leo, suscipit finibus massa pellentesque eget.."
 end)
   :defineAttributes({

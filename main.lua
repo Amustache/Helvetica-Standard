@@ -1,6 +1,7 @@
 -- Globals...
 current_bg = nil
 next_scene = nil
+dialogues = require('dialogue_helper')
 
 -- Load scenes and start with intro
 local SceneryInit = require("scenery")

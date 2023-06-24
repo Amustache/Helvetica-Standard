@@ -2,29 +2,29 @@ local Ero = require('erogodic')
 
 local script = Ero(function()
   name ""
-  msg "[SAMPLE] Thank you for rescuing my beloved tomboyish daughter!"
+  avatar ""
+  background "placeholders/chamber_bg.png"
+  next_scene ""
+
+  name ""
+  msg "Thank you for rescuing my beloved tomboyish daughter!"
   local baklava = option "Delicious Baklava"
   local hamster = option "Loyal Hamster"
   menu "Select your reward"
   if selection(baklava) then
-    giveItem("Baklava")
+    msg "A fine choice."
   elseif selection(hamster) then
-    giveItem("Hamster")
+    msg "Interested in the dark arts, are we?"
   end
   msg "Also, take this powerful weapon!"
-  giveItem("Slightly-Rusted Dwarfbane +3")
+  next_scene "phone"
   msg "Farewell!"
 end)
   :defineAttributes({
     'name',
     'avatar',
     'background',
+    'next_scene',
   })
-  :addMacro('giveItem', function(item)
-    local lastName = get('name')
-    name ""
-    msg("You got the " .. item .. "!")
-    name(lastName)
-  end)
 
 return script

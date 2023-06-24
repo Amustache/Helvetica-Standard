@@ -1,12 +1,13 @@
 -- Scene
 local scene = {}
 
--- Load dialogues for that scene
-dialogues = require('dialogue_helper')
-script = require('dialogues.intro')
-dialogues.init(script)
-
 function scene:load()
+    print("load intro")
+
+    -- Load dialogues for that scene
+    local script = require('dialogues.intro')
+    dialogues.init(script)
+    
     dialogues.nextMessage()
 end
 
