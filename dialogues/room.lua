@@ -1,4 +1,4 @@
-local Ero = require('erogodic')
+local Ero = require('libs.erogodic')
 
 local script = Ero(function()
   name ""

@@ -1,13 +1,13 @@
 -- Globals...
 current_bg = nil
 next_scene = nil
-dialogues = require('dialogue_helper')
+dialogues = require('libs.dialogue_helper')
 
 -- Load scenes and start with intro
-local SceneryInit = require("scenery")
+local SceneryInit = require("libs.scenery")
 local scenery = SceneryInit("intro")
 
-Talkies = require("talkies")
+Talkies = require("libs.talkies")
 -- Default configuration for Talkies
 Talkies.textSpeed = "fast"
 Talkies.talkSound = love.audio.newSource("sfx/typeSound.wav", "static")
@@ -15,7 +15,7 @@ Talkies.optionSwitchSound = love.audio.newSource("sfx/optionSwitch.wav", "static
 Talkies.indicatorCharacter = ">"
 Talkies.optionCharacter = "> "
 Talkies.inlineOptions = true
-Talkies.font = love.graphics.newFont("Pixel UniCode.ttf", 32)
+Talkies.font = love.graphics.newFont("fonts/Pixel UniCode.ttf", 32)
 Talkies.padding = 32
 Talkies.thickness = 1
 Talkies.rounding = 10
