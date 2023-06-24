@@ -1,0 +1,20 @@
+local prenoms = {"modestine", "tatienne", "augustin", "micheline", "yolande", "zephyrine", "liane", "mirabelle",
+                 "marthe", "marise", "loup", "adrien", "florianne", "zephyrine", "marise", "monique", "pons", "gratien",
+                 "emmanuelle", "evette", "amaury", "sabine", "ghislaine", "charlotte", "micheline", "mignon", "jolie",
+                 "madeleine", "hugues", "fabien", "virginie", "blanche", "bertrand", "suzette", "lucienne", "didier",
+                 "sylvain", "marcelle", "reine", "oriane", "aristide", "florianne", "justine", "clarisse", "luc",
+                 "marcelline", "marise", "renaud", "emmanuelle", "prosper", "rolande", "angeline", "angelique",
+                 "florentin", "laurentine", "marielle", "jolie", "anselme", "alexandrie", "claudine", "damien",
+                 "rolande", "raymonde", "gaston", "papillion", "hercule", "donatienne", "bastien", "juliette", "roxane",
+                 "rochelle", "fabienne", "matthieu", "claudine", "denis", "placide", "rolande", "constantin",
+                 "rodrigue", "zephyrine", "anne", "pons", "pascal", "antoine", "charlotte", "damien", "carole",
+                 "anselme", "lucinde", "lazare", "lucile", "pascal", "benjamine", "fiacre", "pascale", "sylvaine",
+                 "mathilde", "noella", "romaine", "adrienne", "jolie", "nadine", "sylvianne", "lucille", "paule",
+                 "tatienne", "doriane", "clementine", "sylvaine", "gilles", "toussaint", "olivier", "victoire", "eloi",
+                 "philibert", "marceline", "maximilien", "nicolas", "sylviane", "ninon", "agathe", "evette", "evette",
+                 "noelle", "gustave", "rosine", "aline", "juste", "christelle", "gilberte", "charlotte", "rosette",
+                 "narcisse", "thibault", "gwenaelle", "dianne", "hyacinthe", "seraphine", "marguerite", "hortense",
+                 "lucinde", "lothaire", "michel", "eloi", "philippe", "arlette", "ghislain", "olivie", "joceline",
+                 "yolande"}
+
+return prenoms
