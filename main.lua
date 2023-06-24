@@ -23,6 +23,10 @@ Talkies.typedNotTalked = false
 Talkies.pitchValues = {0.7, 0.8, 1.0, 1.2, 1.3}
 Talkies.height = 128
 
+-- Pixel scaling
+love.graphics.setDefaultFilter("nearest")
+SCALING = 4
+
 function love.load()
     scenery:load()
 end
@@ -31,7 +35,7 @@ function love.keypressed(key)
     if key == "escape" then love.event.quit() end
     -- if key == "c" then Talkies.clearMessages() end
     -- if key == "m" then Talkies.say("Title", {"Message one", "two", "and three..."}, {onstart=function() end}) end
-    if key == "space" then Talkies.onAction() end
+    if key == "space" or key == 'return' or key == 'e' or key == 'z' then Talkies.onAction() end
     if key == "up" then Talkies.prevOption() end
     if key == "down" then Talkies.nextOption() end
 end
