@@ -5,7 +5,15 @@ local script = Ero(function()
   avatar ""
   background "placeholders/chamber_bg.png"
 
-  name "HEROE"
+  name "Megan"
+  avatar ""
+  msg "EH SALUT EN FAIT LOL"
+
+  name "Anna"
+  avatar ""
+  msg "EH SALUT EN FAIT LOL"
+
+  name "Adam"
   avatar ""
   msg "EH SALUT EN FAIT LOL"
 end)
