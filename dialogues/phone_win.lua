@@ -4,7 +4,6 @@ local script = Ero(function()
   name ""
   avatar ""
   background "img/phone_win.png"
-  next_scene "cafe"
 
   name "HEROE"
   avatar ""
@@ -14,7 +13,6 @@ end)
     'name',
     'avatar',
     'background',
-    'next_scene',
   })
 
 return script

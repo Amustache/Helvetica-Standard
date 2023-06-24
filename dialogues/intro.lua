@@ -4,7 +4,6 @@ local script = Ero(function()
   name ""
   avatar ""
   background ""
-  next_scene ""
 
   -- 1
   background "img/intro_1.png"
@@ -16,7 +15,6 @@ local script = Ero(function()
 
   -- 3
   background "img/intro_3.png"
-  next_scene "room"
   msg "Etiam bibendum turpis leo, suscipit finibus massa pellentesque eget.."
 end)
   :defineAttributes({
