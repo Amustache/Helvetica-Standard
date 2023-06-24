@@ -16,8 +16,8 @@ function scene:draw()
 end
 
 function scene:update(dt)
-    if Talkies.isOpen() == false and scene_next then
-        self.setScene(scene_next)
+    if Talkies.isOpen() == false then
+        fsm:end_day()
     end
 end
 

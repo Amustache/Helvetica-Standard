@@ -2,22 +2,24 @@
 local scene = {}
 
 function scene:load()
-    print("load:\t\t chapitre")
-    
-    -- Load dialogues for that scene
-    local script = require('dialogues.chapitre')
-    dialogues.init(script)
-
-    dialogues.nextMessage()
+    print("load:\t\t chapitre transition")
 end
 
 function scene:draw()
-    love.graphics.draw(current_bg, 0, 0, 0, SCALING)
+    love.graphics.clear()
+    love.graphics.print("FIN DE LA JOURNÉE", 0, 0) -- TODO, HARDCODED
 end
 
 function scene:update(dt)
-    if Talkies.isOpen() == false and scene_next then
-        self.setScene(scene_next)
+    if not Talkies.isOpen() and minigame_playing == "" then
+        minigame_playing = "chapter"
+        print("chapter:\t " .. "chapter")
+    end
+
+    if minigame_playing == "chapter" then
+        if key_pressed == "space" then
+            fsm:enter_cafe()
+        end
     end
 end
 

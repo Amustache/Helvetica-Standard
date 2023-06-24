@@ -176,8 +176,7 @@ function scene:update(dt)
 
         if #goals == 0 then
             minigame_playing = ""
-            print("scene_next: " .. scene_next)
-            self.setScene(scene_next)
+            fsm:phone_win()
         end
     end
 end

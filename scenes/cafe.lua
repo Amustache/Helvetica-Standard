@@ -2,10 +2,10 @@
 local scene = {}
 
 function scene:load()
-    print("load:\t\t phone_win")
+    print("load:\t\t cafe")
     
     -- Load dialogues for that scene
-    local script = require('dialogues.phone_win')
+    local script = require('dialogues.cafe')
     dialogues.init(script)
 
     dialogues.nextMessage()
@@ -16,8 +16,8 @@ function scene:draw()
 end
 
 function scene:update(dt)
-    if Talkies.isOpen() == false and scene_next then
-        self.setScene(scene_next)
+    if Talkies.isOpen() == false then
+        fsm:travel_to_cabane()
     end
 end
 

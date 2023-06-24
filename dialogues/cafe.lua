@@ -3,12 +3,12 @@ local Ero = require('libs.erogodic')
 local script = Ero(function()
   name ""
   avatar ""
-  background "img/phone_win.png"
-  next_scene "cafe"
+  background "placeholders/chamber_bg.png"
+  next_scene ""
 
   name "HEROE"
   avatar ""
-  msg "trob1 ptdr"
+  msg "EH SALUT EN FAIT LOL"
 end)
   :defineAttributes({
     'name',
