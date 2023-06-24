@@ -33,9 +33,8 @@ function scene:load()
 
     -- Contacts
     contacts = require('prenoms')
-    goals = {"modestine", "tatienne"}
+    goals = {"lothaire", "monique"}
     found = {}
-    current_contact = ""
 
     offset = {
         min = 0,
@@ -46,14 +45,15 @@ function scene:load()
     }
 end
 
-local timer = 60
 function scene:update(dt)
+    -- Starts minigame once dialogue is done
     if Talkies.isOpen() == false and minigame_playing == "" then
         minigame_playing = "phone"
         print("minigame:\t " .. minigame_playing)
     end
 
     if minigame_playing == "phone" then
+        -- Move selector
         if key_pressed == "up" and offset.offset == 0 and offset.cur > offset.min then
             offset.cur = offset.cur - offset.step
             offset.offset = -offset.step
@@ -64,6 +64,7 @@ function scene:update(dt)
             offset.offset = offset.step
         end
 
+        -- Scroll animation
         if offset.offset > 0 then
             offset.offset = offset.offset - 6
         end
@@ -72,13 +73,39 @@ function scene:update(dt)
             offset.offset = offset.offset + 6
         end
 
+        -- Select a thing
         if key_pressed == "space" then
             contact_selector.pressed = true
+            local found_one = false
+            local current_contact = contacts[1 + 2 + offset.cur / offset.step]  -- Table starts at 1, and there's a 2-contacts offset
+            print(current_contact)
 
+            for i = 1, #goals do
+                if current_contact == goals[i] then
+                    table.remove(goals, i)
+                    table.insert(found, current_contact)
+                    found_one = true
+                end
+            end
+
+            if found_one then
+                if not success:isPlaying() then
+                    love.audio.play(success)
+                end
+            else
+                if not failure:isPlaying() then
+                    love.audio.play(failure)
+                end
+            end
         end
 
         if not key_pressed then
             contact_selector.pressed = false
+        end
+
+        if #goals == 0 then
+            minigame_playing = ""
+            fsm:phone_win()
         end
     end
 end
@@ -90,6 +117,12 @@ local function draw_contacts()
 
         love.graphics.draw(contact_png, x, y, 0, SCALING)
         love.graphics.print(contacts[i], 100 + x, 15 + y) -- TODO, HARDCODED
+
+        for j = 1, #found do
+            if contacts[i] == found[j] then
+                love.graphics.draw(contact_found_png, x, y, 0, SCALING)
+            end
+        end
     end
 end
 
