@@ -1,7 +1,7 @@
 local Ero = require('erogodic')
 
 local script = Ero(function()
-  name "Shopkeeper"
+  name ""
   msg "Thank you for rescuing my beloved tomboyish daughter!"
   local baklava = option "Delicious Baklava"
   local hamster = option "Loyal Hamster"
@@ -17,6 +17,8 @@ local script = Ero(function()
 end)
   :defineAttributes({
     'name',
+    'avatar',
+    'background',
   })
   :addMacro('giveItem', function(item)
     local lastName = get('name')

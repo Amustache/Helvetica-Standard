@@ -1,5 +1,6 @@
+-- Load scenes and start with intro
 local SceneryInit = require("scenery")
-local scenery = SceneryInit("room")
+local scenery = SceneryInit("intro")
 
 Talkies = require("talkies")
 -- Default configuration for Talkies
