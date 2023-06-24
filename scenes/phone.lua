@@ -1,12 +1,11 @@
 -- Scene
 local scene = {}
-next_scene = "phone_win"
 
 -- Contacts
 local contacts = require('prenoms')
 local max_contacts = #contacts
 local visible_contacts = 8 -- TODO, HARDCODED
-local goals = {"mirabelle", "pons"}
+local goals = {"modestine", "tatienne"}
 local found = {}
 local current_contact = ""
 
@@ -175,9 +174,9 @@ function scene:update(dt)
             --     end
         end
 
-        if #goals == 1 then
+        if #goals == 0 then
             minigame_playing = ""
-            self.setScene(next_scene)
+            self.setScene(scene_next)
         end
     end
 end

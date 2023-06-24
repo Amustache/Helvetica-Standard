@@ -48,7 +48,7 @@ displayMessageNode = function(node)
   -- Next scene
   if node.next_scene and node.next_scene ~= '' then
     print("dialogue:\t\t next scene: " .. node.next_scene)
-      next_scene = node.next_scene
+      scene_next = node.next_scene
   end
 end
 

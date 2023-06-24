@@ -1,14 +1,14 @@
 -- Globals...
 current_bg_name = ""
 current_bg = nil
-next_scene = nil
+scene_next = "intro"
 dialogues = require('libs.dialogue_helper')
 minigame_playing = ""
 key_pressed = nil
 
 -- Load scenes and start with intro
 local SceneryInit = require("libs.scenery")
-local scenery = SceneryInit("phone")
+local scenery = SceneryInit(scene_next)
 
 Talkies = require("libs.talkies")
 -- Default configuration for Talkies

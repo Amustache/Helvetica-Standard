@@ -6,19 +6,11 @@ local script = Ero(function()
   background "img/bedroom_1.png"
   next_scene ""
 
-  name ""
-  msg "Thank you for rescuing my beloved tomboyish daughter!"
-  local baklava = option "Delicious Baklava"
-  local hamster = option "Loyal Hamster"
-  menu "Select your reward"
-  if selection(baklava) then
-    msg "A fine choice."
-  elseif selection(hamster) then
-    msg "Interested in the dark arts, are we?"
-  end
-  msg "Also, take this powerful weapon!"
+  name "Mom"
+  msg "Ben alors va voir tes potes lol"
+  name "HEROE"
   next_scene "phone"
-  msg "Farewell!"
+  msg "oe ok"
 end)
   :defineAttributes({
     'name',

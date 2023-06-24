@@ -5,7 +5,7 @@ function scene:load()
     print("load:\t\t phone_win")
     
     -- Load dialogues for that scene
-    local script = require('dialogues.sample')
+    local script = require('dialogues.phone_win')
     dialogues.init(script)
 
     dialogues.nextMessage()
@@ -16,8 +16,8 @@ function scene:draw()
 end
 
 function scene:update(dt)
-    if Talkies.isOpen() == false and next_scene then
-        self.setScene(next_scene)
+    if Talkies.isOpen() == false and scene_next then
+        self.setScene(scene_next)
     end
 end
 

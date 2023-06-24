@@ -16,8 +16,8 @@ function scene:draw()
 end
 
 function scene:update(dt)
-    if Talkies.isOpen() == false and next_scene then
-        self.setScene(next_scene)
+    if Talkies.isOpen() == false and scene_next then
+        self.setScene(scene_next)
     end
 end
 
