@@ -35,14 +35,9 @@ function scene:update(dt)
         minigame_playing = "phone"
         print("minigame:\t " .. minigame_playing)
     end
-end
 
-function scene:keypressed(key)
-    print("hiii")
-    if minigame_playing then
-        if key == "space" then print("space") end
-        if key == "up" then print("up") end
-        if key == "down" then print("down") end
+    if minigame_playing == "phone" then
+        print(key_pressed)
     end
 end
 

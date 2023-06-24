@@ -4,13 +4,11 @@ current_bg = nil
 next_scene = nil
 dialogues = require('libs.dialogue_helper')
 minigame_playing = ""
+key_pressed = nil
 
 -- Load scenes and start with intro
 local SceneryInit = require("libs.scenery")
 local scenery = SceneryInit("phone")
-
--- Load minigames keys
-minigame_keys = require('minigames_keys')
 
 Talkies = require("libs.talkies")
 -- Default configuration for Talkies
@@ -43,6 +41,8 @@ function love.load()
 end
 
 function love.keypressed(key)
+    key_pressed = key  -- Ew
+
     if key == "escape" then love.event.quit() end
 
     if minigame_playing == "" then  -- Dialogue
@@ -51,10 +51,12 @@ function love.keypressed(key)
         if key == "space" or key == 'return' or key == 'e' or key == 'z' then Talkies.onAction() end
         if key == "up" then Talkies.prevOption() end
         if key == "down" then Talkies.nextOption() end
-    else  -- Minigame
-        minigame_keys[minigame_playing](key)
     end
 end
+
+function love.keyreleased(key)
+    key_pressed = nil  -- Ew
+ end
   
 function love.update(dt)
     scenery:update(dt)
