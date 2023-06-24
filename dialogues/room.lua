@@ -6,7 +6,7 @@ local script = Ero(function()
     background "img/bedroom_1.png"
 
     name "HEROE"
-    msg "...--...--..."
+    msg "...-- ...-- ..."
     msg "*baille*"
     msg "Oh la vache,-- j'ai dormi comme une pierre."
     msg "C'était SI LONG pour rentrer de [GRANDE VILLE]..."
