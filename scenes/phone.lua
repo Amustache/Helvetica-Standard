@@ -75,9 +75,9 @@ local function draw_contacts(offset) -- top_visible is between 0 and #prenoms
         }
 
         -- Debug
-        love.graphics.setColor(0, 0, 1)
-        love.graphics.rectangle("line", box.x, box.y, box.w, box.h)
-        love.graphics.setColor(255, 255, 255)
+        -- love.graphics.setColor(0, 0, 1)
+        -- love.graphics.rectangle("line", box.x, box.y, box.w, box.h)
+        -- love.graphics.setColor(255, 255, 255)
 
         if is_a_in_b(box, contact_selector) then
             print(current_contact)
@@ -100,9 +100,9 @@ function scene:draw()
     end
 
     -- Debug
-    love.graphics.setColor(1, 0, 0)
-    love.graphics.rectangle("line", contact_selector.x, contact_selector.y, contact_selector.w, contact_selector.h)
-    love.graphics.setColor(255, 255, 255)
+    -- love.graphics.setColor(1, 0, 0)
+    -- love.graphics.rectangle("line", contact_selector.x, contact_selector.y, contact_selector.w, contact_selector.h)
+    -- love.graphics.setColor(255, 255, 255)
 
 end
 
@@ -176,6 +176,7 @@ function scene:update(dt)
 
         if #goals == 0 then
             minigame_playing = ""
+            print("scene_next: " .. scene_next)
             self.setScene(scene_next)
         end
     end

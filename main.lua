@@ -1,7 +1,7 @@
 -- Globals...
 current_bg_name = ""
 current_bg = nil
-scene_next = "intro"
+scene_next = "room"
 dialogues = require('libs.dialogue_helper')
 minigame_playing = ""
 key_pressed = nil
