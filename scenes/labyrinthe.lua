@@ -28,6 +28,18 @@ function scene:load()
         n = {visible=true, file=love.graphics.newImage("placeholders/hidding_tree_n.png")},
     }
 
+    poi = {
+        love.graphics.newImage("placeholders/poi_1.png"),
+        love.graphics.newImage("placeholders/poi_2.png"),
+        love.graphics.newImage("placeholders/poi_3.png"),
+        love.graphics.newImage("placeholders/poi_4.png"),
+        love.graphics.newImage("placeholders/poi_5.png"),
+        love.graphics.newImage("placeholders/poi_6.png"),
+        love.graphics.newImage("placeholders/poi_7.png"),
+        love.graphics.newImage("placeholders/poi_8.png"),
+        love.graphics.newImage("placeholders/poi_0.png"),
+    }
+
     -- Specific SFX
 
     local function reveal_hidden(l)
@@ -64,7 +76,7 @@ function scene:load()
         },
         callbacks = {
             -- callback = function(self, event, from, to) end,
-            onstatechange = function(self, event, from, to) print(to) end,
+            onstatechange = function(self, event, from, to) end,
             on1 = function(self, event, from, to)
                 reveal_hidden({})
             end,
@@ -165,6 +177,14 @@ function scene:draw()
         if v.visible then
             love.graphics.draw(v.file, 0, 0, 0, SCALING) 
         end
+    end
+
+    if maze_fsm.current == "start" then
+        love.graphics.draw(poi[9], 0, 0, 0, SCALING)
+    elseif maze_fsm.current == "finish" then
+        --
+    else
+        love.graphics.draw(poi[tonumber(maze_fsm.current)], 0, 0, 0, SCALING)
     end
 end
 
