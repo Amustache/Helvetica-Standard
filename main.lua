@@ -9,6 +9,9 @@ minigame_playing = ""
 local SceneryInit = require("libs.scenery")
 local scenery = SceneryInit("phone")
 
+-- Load minigames keys
+minigame_keys = require('minigames_keys')
+
 Talkies = require("libs.talkies")
 -- Default configuration for Talkies
 Talkies.textSpeed = "fast"
@@ -39,15 +42,6 @@ function love.load()
     scenery:load()
 end
 
-function minigame_keys_phone(key)
-    print("hiii")
-    if minigame_playing then
-        if key == "space" then print("space") end
-        if key == "up" then print("up") end
-        if key == "down" then print("down") end
-    end
-end
-
 function love.keypressed(key)
     if key == "escape" then love.event.quit() end
 
@@ -58,7 +52,7 @@ function love.keypressed(key)
         if key == "up" then Talkies.prevOption() end
         if key == "down" then Talkies.nextOption() end
     else  -- Minigame
-        minigame_keys_phone(key)
+        minigame_keys[minigame_playing](key)
     end
 end
   
