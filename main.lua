@@ -1,3 +1,7 @@
+-- Globals...
+current_bg = nil
+next_scene = nil
+
 -- Load scenes and start with intro
 local SceneryInit = require("scenery")
 local scenery = SceneryInit("intro")
