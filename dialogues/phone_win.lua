@@ -7,7 +7,8 @@ local script = Ero(function()
 
   name "HEROE"
   avatar ""
-  msg "trob1 ptdr"
+  msg "There they are!"
+  msg "Alright, here goes nothing!"
 end)
   :defineAttributes({
     'name',

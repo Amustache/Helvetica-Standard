@@ -7,14 +7,14 @@ local script = Ero(function()
   next_scene "phone_win"
 
   name "HEROE"
-  msg "Je vais voir dans mes contacts si j'ai toujours leur numéro."
-  msg "Si c'est le cas, je vais créer un groupe avec tout le monde - ce sera plus simple !"
+  msg "I should still have their number in my phone."
+  msg "Let's see..."
 
   name ""
-  msg "Utilise les flèches HAUT et BAS de ton clavier pour scroller dans tes contacts."
-  msg "Plus longtemps tu restes appuyé.e, plus tu scrolleras loin."
-  msg "Une fois le contact trouvé, utilise la touche ESPACE pour le sélectionner."
-  msg "Quand tu as terminé, scroll tout en bas pour créer le groupe, et parler à tes ami.e.s."
+  msg "Use the UP and DOWN keys to scroll in your contacts list."
+  msg "The longer you hold the key, the further you'll scroll."
+  msg "Select a contact with the SPACE bar."
+  msg "When both contacts are selected, scroll at the very bottom of the page to confirm."
 end)
   :defineAttributes({
     'name',
