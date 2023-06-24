@@ -1,12 +1,15 @@
+-- Debug
+START_SCENE = "phone"
+
 -- Load scenes and start with scene room
 local SceneryInit = require("libs.scenery")
-local scenery = SceneryInit("room")
+local scenery = SceneryInit(START_SCENE)
 
 -- Finite state machine for ease of use
 local machine = require('libs.statemachine')
 
 fsm = machine.create({
-    initial = "room",
+    initial = START_SCENE,
     events = {
         -- Introduction
         {name = "intro", from = "intro", to = "room"},
