@@ -3,6 +3,6 @@ local prenoms = {'', '', 'Fabien', 'Leah', 'Monique', 'Ninon', 'MAMAN', 'PAPA', 
                  'Gwenaelle', 'Victoire', 'Hortense', 'Mathilde', 'Anselme', 'Sylvain', 'Nadine', 'Liane', 'Angelique',
                  'Christelle', 'Laurentine', 'Gustave', 'Pons', 'Zephyrine', 'Oriane', 'Agathe', 'Justine', 'Lucienne',
                  'Tatienne', 'Prosper', 'Ex...', 'Noella', 'Charlotte', 'Renaud', 'Gagi Tacos', 'Adam', 'Yolande',
-                 'Group', '', '', '', ''}
+                 'GROUP', '', '', '', ''}
 
 return prenoms
