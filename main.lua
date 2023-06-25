@@ -26,8 +26,8 @@ fsm = machine.create({
         {name = "labyrinthe_win", from = "labyrinthe", to = "labyrinthe_win"},
         {name = "cabane_ext", from = "labyrinthe_win", to = "cabane_ext"},
         {name = "cabane_int", from = "cabane_ext", to = "cabane_int"},
-        {name = "back_to_room", from = "cabane_int", to = "room"},
-        {name = "end_day", from = "room", to = "???"},
+        {name = "back_to_room", from = "cabane_int", to = "room_2"},
+        {name = "end_day_2", from = "room_2", to = "end_day_2"},
     },
     callbacks = {
         -- callback = function(self, event, from, to) end,
