@@ -11,21 +11,21 @@ function scene:load()
     dialogues.nextMessage()
 
     -- Specific graphics
-    hidding_trees = {
-        a = {visible=true, file=love.graphics.newImage("img/hidding_tree_a.png")},
-        b = {visible=true, file=love.graphics.newImage("img/hidding_tree_b.png")},
-        c = {visible=true, file=love.graphics.newImage("img/hidding_tree_c.png")},
-        d = {visible=true, file=love.graphics.newImage("img/hidding_tree_d.png")},
-        e = {visible=true, file=love.graphics.newImage("img/hidding_tree_e.png")},
-        f = {visible=true, file=love.graphics.newImage("img/hidding_tree_f.png")},
+    hidding_trees = {  -- Sorted by visibility
+        n = {visible=true, file=love.graphics.newImage("img/hidding_tree_n.png")},
         g = {visible=true, file=love.graphics.newImage("img/hidding_tree_g.png")},
-        h = {visible=true, file=love.graphics.newImage("img/hidding_tree_h.png")},
-        i = {visible=true, file=love.graphics.newImage("img/hidding_tree_i.png")},
-        j = {visible=true, file=love.graphics.newImage("img/hidding_tree_j.png")},
+        f = {visible=true, file=love.graphics.newImage("img/hidding_tree_f.png")},
         k = {visible=true, file=love.graphics.newImage("img/hidding_tree_k.png")},
         l = {visible=true, file=love.graphics.newImage("img/hidding_tree_l.png")},
         m = {visible=true, file=love.graphics.newImage("img/hidding_tree_m.png")},
-        n = {visible=true, file=love.graphics.newImage("img/hidding_tree_n.png")},
+        e = {visible=true, file=love.graphics.newImage("img/hidding_tree_e.png")},
+        i = {visible=true, file=love.graphics.newImage("img/hidding_tree_i.png")},
+        j = {visible=true, file=love.graphics.newImage("img/hidding_tree_j.png")},
+        a = {visible=true, file=love.graphics.newImage("img/hidding_tree_a.png")},
+        h = {visible=true, file=love.graphics.newImage("img/hidding_tree_h.png")},
+        d = {visible=true, file=love.graphics.newImage("img/hidding_tree_d.png")},
+        c = {visible=true, file=love.graphics.newImage("img/hidding_tree_c.png")},
+        b = {visible=true, file=love.graphics.newImage("img/hidding_tree_b.png")},
     }
 
     poi = {
