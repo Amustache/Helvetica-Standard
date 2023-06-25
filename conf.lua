@@ -10,7 +10,7 @@ function love.conf(t)
     t.audio.mic = false                 -- Request and use microphone capabilities in Android (boolean)
     t.audio.mixwithsystem = true        -- Keep background music playing when opening LOVE (boolean, iOS and Android only)
 
-    t.window.title = "Helvetica Standard"         -- The window title (string)
+    t.window.title = "Holidays from a past life can influence or reinforce transformations in a future life"         -- The window title (string)
     t.window.icon = nil                 -- Filepath to an image to use as the window's icon (string)
     t.window.width = 1200                -- The window width (number)
     t.window.height = 800               -- The window height (number)

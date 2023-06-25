@@ -71,7 +71,7 @@ function scene:load()
             {name = "up", from = "5", to = "6"},
             {name = "right", from = "5", to = "7"},
             {name = "down", from = "5", to = "4"},
-            {name = "left", from = "6", to = "5"},
+            {name = "down", from = "6", to = "5"},
             {name = "left", from = "7", to = "5"},
             {name = "right", from = "7", to = "8"},
             {name = "down", from = "7", to = "3"},
@@ -95,6 +95,9 @@ function scene:load()
                 end
                 if from == "3" then
                     reveal_hidden("b")
+                end
+                if from == "4" then
+                    reveal_hidden("c")
                 end
             end,
 

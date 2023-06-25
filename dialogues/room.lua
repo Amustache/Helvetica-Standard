@@ -73,7 +73,7 @@ local script = Ero(function()
     msg "What do you mean not much to do?-- You used to always be out with your friends in high school, Dad and I had to fight to even have you home for dinner twice a week."
 
     name "Megan"
-    msg "Hey that's not even true, I was here every...-- like...--- Sunday night."
+    msg "Hey that's not even true, I was here every...-- like...-- Sunday night."
 
     name "Mom"
     msg "Yeah, my point exactly."

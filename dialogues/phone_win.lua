@@ -5,7 +5,7 @@ local script = Ero(function()
   avatar ""
   background "img/phone_win.png"
 
-  name "HEROE"
+  name "Megan"
   avatar ""
   msg "There they are!"
   msg "Alright, here goes nothing!"

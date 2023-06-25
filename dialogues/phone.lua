@@ -6,7 +6,7 @@ local script = Ero(function()
   background "img/phone_bg.png"
   next_scene "phone_win"
 
-  name "HEROE"
+  name "Megan"
   msg "I should still have their number in my phone."
   msg "Let's see..."
 

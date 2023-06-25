@@ -9,9 +9,12 @@ function scene:load()
     dialogues.init(script)
     
     dialogues.nextMessage()
+
+    menu = love.graphics.newImage("placeholders/menu.png")
 end
 
 function scene:draw()
+    love.graphics.draw(menu, 0, 0, 0, SCALING)
 end
 
 function scene:update(dt)
