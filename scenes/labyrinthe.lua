@@ -100,14 +100,14 @@ function scene:load()
             on2 = function(self, event, from, to)
                 reveal_hidden("a")
                 if visited[to] == nil then
-                    Talkies.say("Leah", "Oh la vache !-- Elle a mal vieilli la ferme de Todd !")
-                    Talkies.say("Adam", "En parlant de vache...-- Il n'y avait pas un TAUREAU à l'époque ?")
-                    Talkies.say("Leah", "Oui, mais il doit être mort, depuis le temps, non ?")
-                    Talkies.say("", "*meuh*")
-                    Talkies.say("Megan", "... Venez on bouge.")
+                    Talkies.say("Leah", "Oh my!-- Todd's farm hasn't aged too well!")
+                    Talkies.say("Adam", "Speaking of cows...-- Wasn't there a TAUREAU back then?")
+                    Talkies.say("Leah", "Yeah, but he's got to be dead by now, right?")
+                    Talkies.say("", "moo")
+                    Talkies.say("Megan", "... Let's get moving.")
                     visited[to] = true
                 else
-                    Talkies.say("", "*meeeuh*")
+                    Talkies.say("", "mooo--oo--oo")
                 end
             end,
 

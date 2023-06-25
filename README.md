@@ -26,7 +26,7 @@ Simply use the arrow keys and the space key. Escape to quit.
 * 🌞 => Gucci
 * 🌜 => Desigual
 * 🌜 => Libra
-* 🌜 => Disco
+* 🌞 => Disco
 * 🌜 => Emo
 
 ## How to modify
