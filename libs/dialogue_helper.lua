@@ -30,7 +30,8 @@ displayMessageNode = function(node)
         current_bg_name = node.background
 
         local bg_name, bg_max = current_bg_name:match("(.-)__(.-)$")
-        if bg_name then
+        if bg_name ~= nil then
+            print("\t\tmultiple backgrounds!")
             local bg_ext
             bg_max, bg_ext = bg_max:match("(.-)%.(.-)$")
             bg_ext = "." .. bg_ext
@@ -43,6 +44,7 @@ displayMessageNode = function(node)
         else
             current_bg = {love.graphics.newImage(node.background)} -- Not optimal...
         end
+        current_bg_i = 1
     end
 
     local config = {}
