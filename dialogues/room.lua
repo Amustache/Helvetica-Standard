@@ -110,10 +110,10 @@ local script = Ero(function()
     msg "And what was the name of that other kid, the blonde one?"
 
     name "Megan"
-    msg "JLOM?"
+    msg "Adam?"
 
     name "Mom"
-    msg "Yeah JLOM! Do you have any news from him?"
+    msg "Yeah Adam! Do you have any news from him?"
 
     name "Megan"
     msg "No, I think he's in college as well, to become a doctor,-- or surgeon,-- or something like this."
