@@ -102,7 +102,7 @@ function scene:load()
                 if visited[to] == nil then
                     Talkies.say("Leah", "Oh my!-- Todd's farm hasn't aged too well!")
                     Talkies.say("Adam", "Speaking of cows...-- Wasn't there a TAUREAU back then?")
-                    Talkies.say("Leah", "Yeah, but he's got to be dead by now, right?")
+                    Talkies.say("Leah", "Yeah, but he's probably dead by now, right?")
                     Talkies.say("", "moo")
                     Talkies.say("Megan", "... Let's get moving.")
                     visited[to] = true
@@ -115,12 +115,12 @@ function scene:load()
             on3 = function(self, event, from, to)
                 reveal_hidden("d")
                 if visited[to] == nil then
-                    Talkies.say("Leah", "It's true that we wanted to use that biiig tree back in the days.")
+                    Talkies.say("Leah", "We were always trying to climb this huge tree back in the days.")
                     Talkies.say("Megan", "C'mon, it's not that big.")
                     Talkies.say("Leah", "Yeah, now that you mention it...")
                     visited[to] = true
                 else
-                    Talkies.say("Leah", "But it's still quite tall.")
+                    Talkies.say("Adam", "It's still quite tall though.")
                 end
                 if from == "1" then
                     reveal_hidden("b")
@@ -134,8 +134,15 @@ function scene:load()
             on4 = function(self, event, from, to)
                 reveal_hidden("h")
                 if visited[to] == nil then
+                    Talkies.say("Leah", "Hey Meg remember when your dad caught a tortoise in there?")
+                    Talkies.say("Megan", "That thing was vicious.")
+                    Talkies.say("Adam", "I avoided going to your house for like two weeks at least while you dad kept it in your basement.")
+                    Talkies.say("Megan", "Really?!")
+                    Talkies.say("Adam", "Hey, that thing was vicious.")
                     visited[to] = true
                 else
+                    Talkies.say("Megan", "Did I tell you my dad ultimately put the tortoise back in this lake. It's probably still here.")
+                    Talkies.say("Adam", "Stop it.")
                 end
                 if from == "1" then
                     reveal_hidden("c")
@@ -149,8 +156,11 @@ function scene:load()
             on5 = function(self, event, from, to)
                 reveal_hidden("j")
                 if visited[to] == nil then
+                    Talkies.say("Megan", "So, forward?")
+                    Talkies.say("Leah", "Hell no! To the right!")
                     visited[to] = true
                 else
+                    Talkies.say("Adam", "Haven't we been here already a couple minutes ago?")
                 end
                 if from == "4" then
                     reveal_hidden("i")
@@ -164,8 +174,11 @@ function scene:load()
             on6 = function(self, event, from, to)
                 reveal_hidden("k")
                 if visited[to] == nil then
+                    Talkies.say("Leah", "I remember that thing to be HUGE.")
+                    Talkies.say("Leah", "But it's just a mid-size rock.")
                     visited[to] = true
                 else
+                    Talkies.say("Adam", "Mossy.")
                 end
             end,
 
@@ -173,6 +186,8 @@ function scene:load()
             on7 = function(self, event, from, to)
                 reveal_hidden("f")
                 if visited[to] == nil then
+                    Talkies.say("Megan", "To the right?")
+                    Talkies.say("Adam", "I would have said left.")
                     visited[to] = true
                 else
                 end
@@ -188,6 +203,9 @@ function scene:load()
             on8 = function(self, event, from, to)
                 reveal_hidden("n")
                 if visited[to] == nil then
+                    Talkies.say("Megan", "There, finally!")
+                    Talkies.say("Leah", "Holy cow, it IS still standing!")
+                    Talkies.say("Adam", "Come on, let's get in!")
                     visited[to] = true
                 else
                 end
