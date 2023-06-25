@@ -1,8 +1,8 @@
-local prenoms = {'', '', 'fabien', 'leah', 'monique', 'ninon', 'jolie', 'papillion', 'damien', 'noelle', 'gilberte',
-                 'rosine', 'madeleine', 'clarisse', 'sylviane', 'olivier', 'didier', 'marceline', 'loup', 'clementine',
-                 'gwenaelle', 'victoire', 'hortense', 'mathilde', 'anselme', 'sylvain', 'nadine', 'liane', 'angelique',
-                 'christelle', 'laurentine', 'gustave', 'pons', 'zephyrine', 'oriane', 'agathe', 'justine', 'lucienne',
-                 'tatienne', 'prosper', 'mignon', 'noella', 'charlotte', 'renaud', 'narcisse', 'adam', 'yolande',
-                 'GROUP', '', '', '', ''}
+local prenoms = {'', '', 'Fabien', 'Leah', 'Monique', 'Ninon', 'MAMAN', 'PAPA', 'Damien', 'Noelle', 'Gilberte',
+                 'Rosine', 'Madeleine', 'Clarisse', 'Sylviane', 'Olivier', 'Didier', 'Marceline', 'Le Type Du Sport', 'Clementine',
+                 'Gwenaelle', 'Victoire', 'Hortense', 'Mathilde', 'Anselme', 'Sylvain', 'Nadine', 'Liane', 'Angelique',
+                 'Christelle', 'Laurentine', 'Gustave', 'Pons', 'Zephyrine', 'Oriane', 'Agathe', 'Justine', 'Lucienne',
+                 'Tatienne', 'Prosper', 'Ex...', 'Noella', 'Charlotte', 'Renaud', 'Gagi Tacos', 'Adam', 'Yolande',
+                 'Group', '', '', '', ''}
 
 return prenoms
