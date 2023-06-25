@@ -3,13 +3,12 @@ local scene = {}
 
 function scene:load()
     print("load:\t\t intro")
-
-    -- Load dialogues for that scene
-    local script = require('dialogues.intro')
-    dialogues.init(script)
-    
-    dialogues.nextMessage()
-
+    current_bg = {
+        love.graphics.newImage("img/bedroom_1__1.png"),
+        love.graphics.newImage("img/bedroom_1__2.png"),
+        love.graphics.newImage("img/bedroom_1__3.png"),
+        love.graphics.newImage("img/bedroom_1__4.png"),
+    }
     menu = love.graphics.newImage("placeholders/menu.png")
 end
 
@@ -18,7 +17,7 @@ function scene:draw()
 end
 
 function scene:update(dt)
-    if Talkies.isOpen() == false then
+    if key_pressed == "space" then
         fsm:intro()
     end
 end
