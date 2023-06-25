@@ -2,10 +2,10 @@
 local scene = {}
 
 function scene:load()
-    print("load:\t\t phone_win")
+    print("load:\t\t cabane_int")
     
     -- Load dialogues for that scene
-    local script = require('dialogues.phone_win')
+    local script = require('dialogues.cabane_int')
     dialogues.init(script)
 
     dialogues.nextMessage()
@@ -17,7 +17,7 @@ end
 
 function scene:update(dt)
     if Talkies.isOpen() == false then
-        fsm:end_day_1()
+        fsm:back_to_room()
     end
 end
 

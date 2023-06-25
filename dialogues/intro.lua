@@ -1,27 +1,20 @@
 local Ero = require('libs.erogodic')
 
 local script = Ero(function()
-  name ""
-  avatar ""
-  background ""
+    name ""
+    avatar ""
+    background ""
 
-  -- 1
-  background "img/intro_1.png"
-  msg " Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-
-  -- 2
-  background "img/intro_2.png"
-  msg "Aenean nec fringilla sapien, quis elementum mauris."
-
-  -- 3
-  background "img/intro_3.png"
-  msg "Etiam bibendum turpis leo, suscipit finibus massa pellentesque eget.."
-end)
-  :defineAttributes({
-    'name',
-    'avatar',
-    'background',
-    'next_scene',
-  })
+    -- 1
+    background "img/intro__3.png"
+    local new_game = option "Start a new day"
+    local quit_game = option "Quit"
+    menu "Helvetica Standard"
+    if selection(new_game) then
+      msg "...-- Wake up."
+    elseif selection(quit_game) then
+        love.event.quit()
+    end
+end):defineAttributes({'name', 'avatar', 'background', 'next_scene'})
 
 return script
