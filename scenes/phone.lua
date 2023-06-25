@@ -36,7 +36,7 @@ function scene:load()
 
     -- Contacts
     contacts = require('prenoms')
-    goals = {"lothaire", "monique"}
+    goals = {"adam", "leah"}
     found = {}
 
     offset = {
