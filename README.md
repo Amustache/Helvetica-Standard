@@ -17,6 +17,7 @@ Simply use the arrow keys and the space key. Escape to quit.
 * 🌜 => Metal
 * 🌞 => "Vous allez faire une rencontre" (You're going to meet someone)
 * 🌜 => "Il y aura du changement" (There has been some changes)
+* 🌞 => Taurus
 
 ### Not used
 
@@ -24,8 +25,9 @@ Simply use the arrow keys and the space key. Escape to quit.
 * 🌜 => Choucroute (Sauerkraut)
 * 🌞 => Gucci
 * 🌜 => Desigual
-* 🌞 => Taurus
 * 🌜 => Libra
+* 🌜 => Disco
+* 🌜 => Emo
 
 ## How to modify
 
