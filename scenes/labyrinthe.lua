@@ -256,8 +256,8 @@ function scene:update(dt)
         end
 
         if maze_fsm.current == "finish" then
-            -- minigame_playing = ""
-            -- fsm:labyrinthe_win()
+            minigame_playing = ""
+            fsm:labyrinthe_win()
         end
     end
 end
