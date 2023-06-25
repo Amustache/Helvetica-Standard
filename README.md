@@ -1,5 +1,5 @@
 # Holidays from a past life can influence or reinforce transformations in a future life
-Game made in 42 hours for the Epic Game Jam 2023.
+Game made in 42 hours for the [Epic Game Jam 2023](https://www.epicgamejam.com/games?edition=97).
 
 You can play the game here: <https://astache.itch.io/egj23>.
 
