@@ -176,6 +176,7 @@ function scene:load()
                 if visited[to] == nil then
                     Talkies.say("Leah", "I remember that thing to be HUGE.")
                     Talkies.say("Leah", "But it's just a mid-size rock.")
+                    Talkies.say("Adam", "And look at all that MOSS!")
                     visited[to] = true
                 else
                     Talkies.say("Adam", "Mossy.")
