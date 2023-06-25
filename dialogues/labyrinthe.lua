@@ -1,20 +1,25 @@
 local Ero = require('libs.erogodic')
 
 local script = Ero(function()
-  name ""
-  avatar ""
-  background "img/labyrinthe.png"
+    name ""
+    avatar ""
+    background "img/labyrinthe.png"
 
-  name ""
-  msg "Pour te déplacer dans le labyrinthe, utilise les flèches de ton clavier."
-  msg "Les directions sont indiquées autour de la position de ton personnage, avec des flèches vers les endroits où tu peux aller."
-  msg "Au fur et à mesure, tu pourras découvrir les zones de la forêt. A toi de retrouver la cabane."
-  msg "Pour entrer dans la forêt, appuie sur la flèche du haut."
-end)
-  :defineAttributes({
-    'name',
-    'avatar',
-    'background',
-  })
+    name "Leah"
+    msg "The famous forest !"
+    name "Megan"
+    msg "It's smaller than what I remembered..."
+    name "Leah"
+    msg "Anyhow. Let's go to the right."
+    name "Adam"
+    msg "Uh, absolutely not? We need to go left."
+    name "Megan"
+    msg "Wait, wasn't it straight?"
+
+    name ""
+    msg "Use the UP, DOWN, LEFT and RIGHT keys to move."
+    msg "Available directions are shown with little arrows next to the characters."
+    msg "To start, press UP."
+end):defineAttributes({'name', 'avatar', 'background'})
 
 return script

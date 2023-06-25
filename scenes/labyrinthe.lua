@@ -85,11 +85,6 @@ function scene:load()
             on1 = function(self, event, from, to)
                 reveal_hidden({})
                 if visited[to] == nil then
-                    Talkies.say("Leah", "La fameuse forêt !")
-                    Talkies.say("Megan", "Elle est plus petite que dans mon souvenir...")
-                    Talkies.say("Leah", "Bon, du coup, c'est parti vers la droite, quoi.")
-                    Talkies.say("Adam", "Alors, absolument pas. Il faut aller vers la gauche.")
-                    Talkies.say("Megan", "Vous êtes sûrs ce n'est pas tout droit ?")
                     visited[to] = true
                 else
                 end
