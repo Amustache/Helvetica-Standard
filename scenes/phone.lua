@@ -15,6 +15,7 @@ function scene:load()
     dialogues.nextMessage()
 
     -- Specific graphics
+    phone_front = love.graphics.newImage("img/phone.png")
     contact_png = love.graphics.newImage("img/phone_contact.png")
     contact_padding_png = love.graphics.newImage("img/phone_no_contact.png")
     contact_create_group = love.graphics.newImage("img/phone_create_group.png")
@@ -150,7 +151,7 @@ function scene:draw()
         love.graphics.draw(contact_selector_png, contact_selector.x, contact_selector.y, 0, SCALING)
     end
 
-    love.graphics.draw(current_bg[1], 0, 0, 0, SCALING)  -- tkt
+    love.graphics.draw(phone_front, 0, 0, 0, SCALING)  -- tkt
 end
 
 return scene

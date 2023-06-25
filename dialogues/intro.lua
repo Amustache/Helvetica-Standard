@@ -6,10 +6,10 @@ local script = Ero(function()
     background ""
 
     -- 1
-    background "placeholders/intro__3.png"
+    background "img/bedroom_1__4.png"
     local new_game = option "Start a new day"
     local quit_game = option "Quit"
-    menu "Helvetica Standard"
+    menu ""
     if selection(new_game) then
     elseif selection(quit_game) then
         love.event.quit()
