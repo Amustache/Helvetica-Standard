@@ -1,5 +1,5 @@
 -- Debug
-START_SCENE = "phone"
+START_SCENE = "cafe"
 
 -- Load scenes and start with scene room
 local SceneryInit = require("libs.scenery")
@@ -119,7 +119,7 @@ function love.update(dt)
     --     end
     -- end
 
-    if gdt > 0.25 then
+    if gdt > 1/2 then
         gdt = 0
         current_bg_i = current_bg_i + 1
         if current_bg_i > #current_bg then
