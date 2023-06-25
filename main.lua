@@ -54,7 +54,8 @@ SCALING = 4
 
 -- Globals...
 current_bg_name = ""
-current_bg = nil
+current_bg = nil  -- Table
+current_bg_i = 1  -- Iteration
 minigame_playing = ""
 key_pressed = nil
 transition = ""
@@ -69,7 +70,7 @@ function love.load()
     fadein  = 2
     display = 4
     fadeout = 6
-    splashScreen = love.graphics.newImage("img/intro_1.png")
+    splashScreen = love.graphics.newImage("img/intro__1.png")
 end
 
 -- Global keypressed
@@ -90,7 +91,10 @@ function love.keyreleased(key)
     key_pressed = nil  -- Ew
  end
   
+gdt = 0
 function love.update(dt)
+    gdt = gdt + dt
+
     scenery:update(dt)
     Talkies.update(dt)
 
@@ -112,9 +116,20 @@ function love.update(dt)
             timer = 0
         end
     end
+
+    if gdt > 1 then
+        gdt = 0
+        current_bg_i = current_bg_i + 1
+        if current_bg_i > #current_bg then
+            current_bg_i = 1
+        end
+    end
 end
 
 function love.draw()
+    -- Background
+    love.graphics.draw(current_bg[current_bg_i], 0, 0, 0, SCALING)
+
     scenery:draw()
     Talkies.draw()
 

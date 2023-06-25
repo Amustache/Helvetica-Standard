@@ -12,7 +12,7 @@ function scene:load()
 end
 
 function scene:draw()
-    love.graphics.draw(current_bg, 0, 0, 0, SCALING)
+    -- love.graphics.draw(current_bg, 0, 0, 0, SCALING)
 end
 
 function scene:update(dt)
