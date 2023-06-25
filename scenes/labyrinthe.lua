@@ -115,7 +115,12 @@ function scene:load()
             on3 = function(self, event, from, to)
                 reveal_hidden("d")
                 if visited[to] == nil then
+                    Talkies.say("Leah", "It's true that we wanted to use that biiig tree back in the days.")
+                    Talkies.say("Megan", "C'mon, it's not that big.")
+                    Talkies.say("Leah", "Yeah, now that you mention it...")
+                    visited[to] = true
                 else
+                    Talkies.say("Leah", "But it's still quite tall.")
                 end
                 if from == "1" then
                     reveal_hidden("b")
@@ -129,6 +134,7 @@ function scene:load()
             on4 = function(self, event, from, to)
                 reveal_hidden("h")
                 if visited[to] == nil then
+                    visited[to] = true
                 else
                 end
                 if from == "1" then
@@ -143,6 +149,7 @@ function scene:load()
             on5 = function(self, event, from, to)
                 reveal_hidden("j")
                 if visited[to] == nil then
+                    visited[to] = true
                 else
                 end
                 if from == "4" then
@@ -157,6 +164,7 @@ function scene:load()
             on6 = function(self, event, from, to)
                 reveal_hidden("k")
                 if visited[to] == nil then
+                    visited[to] = true
                 else
                 end
             end,
@@ -165,6 +173,7 @@ function scene:load()
             on7 = function(self, event, from, to)
                 reveal_hidden("f")
                 if visited[to] == nil then
+                    visited[to] = true
                 else
                 end
                 if from == "3" then
@@ -179,6 +188,7 @@ function scene:load()
             on8 = function(self, event, from, to)
                 reveal_hidden("n")
                 if visited[to] == nil then
+                    visited[to] = true
                 else
                 end
                 if from == "4" then
