@@ -95,7 +95,7 @@ local script = Ero(function()
     msg "Well ...-- We don't really talk anymore actually.-- I don't even know if they're still around."
 
     name "Mom"
-    msg "I know that Alan's kid,-- Anna,-- is still here. She's working at the garage with him."
+    msg "I know that Alan's kid,-- Leah,-- is still here. She's working at the garage with him."
 
     name "Megan"
     msg "Oh yeah right, I forgot about that."
