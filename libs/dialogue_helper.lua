@@ -31,15 +31,15 @@ displayMessageNode = function(node)
 
         local bg_name, bg_max = current_bg_name:match("(.-)__(.-)$")
         if bg_name then
-          local bg_ext
-          bg_max, bg_ext = bg_max:match("(.-)%.(.-)$")
-          bg_ext = "." .. bg_ext
-          bg_max = tonumber(bg_max)
+            local bg_ext
+            bg_max, bg_ext = bg_max:match("(.-)%.(.-)$")
+            bg_ext = "." .. bg_ext
+            bg_max = tonumber(bg_max)
 
-          current_bg = {}
-          for i = 1, bg_max do
-            table.insert(current_bg, love.graphics.newImage(bg_name .. "__" .. i .. bg_ext))
-          end
+            current_bg = {}
+            for i = 1, bg_max do
+                table.insert(current_bg, love.graphics.newImage(bg_name .. "__" .. i .. bg_ext))
+            end
         else
             current_bg = {love.graphics.newImage(node.background)} -- Not optimal...
         end
