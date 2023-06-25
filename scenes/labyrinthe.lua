@@ -50,6 +50,9 @@ function scene:load()
         end
     end
 
+    -- Visited
+    local visited = {}
+
     -- FSM
     local machine = require('libs.statemachine')
     maze_fsm = machine.create({
@@ -77,15 +80,45 @@ function scene:load()
         callbacks = {
             -- callback = function(self, event, from, to) end,
             onstatechange = function(self, event, from, to) end,
+
+            -- Entrance
             on1 = function(self, event, from, to)
                 reveal_hidden({})
-                Talkies.say("hehehe", "hohooho")
+                if visited[to] == nil then
+                    Talkies.say("Leah", "La fameuse forêt !")
+                    Talkies.say("Megan", "Elle est plus petite que dans mon souvenir...")
+                    Talkies.say("Leah", "Bon, du coup, c'est parti vers la droite, quoi.")
+                    Talkies.say("Adam", "Alors, absolument pas. Il faut aller vers la gauche.")
+                    Talkies.say("Megan", "Vous êtes sûrs ce n'est pas tout droit ?")
+                    visited[to] = true
+                else
+                end
+                if from == "3" then
+                    reveal_hidden("b")
+                end
             end,
+
+            -- Barn
             on2 = function(self, event, from, to)
                 reveal_hidden("a")
+                if visited[to] == nil then
+                    Talkies.say("Leah", "Oh la vache !-- Elle a mal vieilli la ferme de Todd !")
+                    Talkies.say("Adam", "En parlant de vache...-- Il n'y avait pas un TAUREAU à l'époque ?")
+                    Talkies.say("Leah", "Oui, mais il doit être mort, depuis le temps, non ?")
+                    Talkies.say("", "*meuh*")
+                    Talkies.say("Megan", "... Venez on bouge.")
+                    visited[to] = true
+                else
+                    Talkies.say("", "*meeeuh*")
+                end
             end,
+
+            -- Big tree
             on3 = function(self, event, from, to)
                 reveal_hidden("d")
+                if visited[to] == nil then
+                else
+                end
                 if from == "1" then
                     reveal_hidden("b")
                 end
@@ -93,8 +126,13 @@ function scene:load()
                     reveal_hidden("e")
                 end
             end,
+
+            -- Lake
             on4 = function(self, event, from, to)
                 reveal_hidden("h")
+                if visited[to] == nil then
+                else
+                end
                 if from == "1" then
                     reveal_hidden("c")
                 end
@@ -102,8 +140,13 @@ function scene:load()
                     reveal_hidden("i")
                 end
             end,
+
+            -- Small crossing
             on5 = function(self, event, from, to)
                 reveal_hidden("j")
+                if visited[to] == nil then
+                else
+                end
                 if from == "4" then
                     reveal_hidden("i")
                 end
@@ -111,11 +154,21 @@ function scene:load()
                     reveal_hidden("l")
                 end
             end,
+
+            -- Big rock
             on6 = function(self, event, from, to)
                 reveal_hidden("k")
+                if visited[to] == nil then
+                else
+                end
             end,
+
+            -- Big crossing
             on7 = function(self, event, from, to)
                 reveal_hidden("f")
+                if visited[to] == nil then
+                else
+                end
                 if from == "3" then
                     reveal_hidden("e")
                 end
@@ -123,8 +176,13 @@ function scene:load()
                     reveal_hidden("l")
                 end
             end,
+
+            -- Cabane
             on8 = function(self, event, from, to)
                 reveal_hidden("n")
+                if visited[to] == nil then
+                else
+                end
                 if from == "4" then
                     reveal_hidden("m")
                 end
