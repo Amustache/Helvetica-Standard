@@ -7,7 +7,7 @@ local script = Ero(function()
 
     -- 1
     background "img/intro_1.png"
-    local new_game = option "New Game"
+    local new_game = option "Start a new day"
     local quit_game = option "Quit"
     menu "Helvetica Standard"
     if selection(new_game) then
