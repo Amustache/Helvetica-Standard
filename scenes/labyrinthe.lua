@@ -188,6 +188,9 @@ function scene:load()
             on8 = function(self, event, from, to)
                 reveal_hidden("n")
                 if visited[to] == nil then
+                    Talkies.say("Leah", "There it is! The treehouse!")
+                    Talkies.say("Megan", "... But...-- What happened?")
+                    Talkies.say("Adam", "We should enter.")
                     visited[to] = true
                 else
                 end
@@ -237,8 +240,8 @@ function scene:update(dt)
         end
 
         if maze_fsm.current == "finish" then
-            minigame_playing = ""
-            fsm:labyrinthe_win()
+            -- minigame_playing = ""
+            -- fsm:labyrinthe_win()
         end
     end
 end

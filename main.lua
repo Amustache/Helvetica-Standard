@@ -1,5 +1,5 @@
 -- Debug
-START_SCENE = "intro"
+START_SCENE = "labyrinthe"
 
 -- Load scenes and start with scene room
 local SceneryInit = require("libs.scenery")
@@ -24,12 +24,12 @@ fsm = machine.create({
         -- {name = "travel_to_cabane", from = "cafe", to = "travel_cabane"},
         -- {name = "minigame_labyrinthe", from = "travel_cabane", to = "labyrinthe"},
         {name = "travel_to_cabane", from = "cafe", to = "labyrinthe"},
-        {name = "labyrinthe_win", from = "labyrinthe", to = "labyrinthe_win"},
+        -- {name = "labyrinthe_win", from = "labyrinthe", to = "labyrinthe_win"},
         -- {name = "cabane_ext", from = "labyrinthe_win", to = "cabane_ext"},
         -- {name = "cabane_int", from = "cabane_ext", to = "cabane_int"},
         -- {name = "back_to_room", from = "cabane_int", to = "room_2"},
         -- {name = "end_day_2", from = "room_2", to = "end_day_2"},
-        {name = "cabane_ext", from = "labyrinthe_win", to = "end_day_2"},
+        {name = "labyrinthe_win", from = "labyrinthe", to = "end_day_2"},
     },
     callbacks = {
         -- callback = function(self, event, from, to) end,
