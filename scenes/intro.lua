@@ -4,10 +4,10 @@ local scene = {}
 function scene:load()
     print("load:\t\t intro")
     current_bg = {
-        love.graphics.newImage("img/bedroom_1__1.png"),
-        love.graphics.newImage("img/bedroom_1__2.png"),
-        love.graphics.newImage("img/bedroom_1__3.png"),
-        love.graphics.newImage("img/bedroom_1__4.png"),
+        love.graphics.newImage("img/menu__1.png"),
+        love.graphics.newImage("img/menu__2.png"),
+        love.graphics.newImage("img/menu__3.png"),
+        love.graphics.newImage("img/menu__4.png"),
     }
     menu = love.graphics.newImage("placeholders/menu.png")
 end
