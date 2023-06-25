@@ -81,7 +81,7 @@ function scene:update(dt)
             contact_selector.pressed = true
             local found_one = false
             local current_contact = contacts[1 + 2 + offset.cur / offset.step] -- Table starts at 1, and there's a 2-contacts offset
-            print(current_contact)
+            -- print(current_contact)
 
             for i = 1, #goals do
                 if current_contact == goals[i] then
@@ -150,7 +150,7 @@ function scene:draw()
         love.graphics.draw(contact_selector_png, contact_selector.x, contact_selector.y, 0, SCALING)
     end
 
-    love.graphics.draw(current_bg, 0, 0, 0, SCALING)
+    love.graphics.draw(current_bg[1], 0, 0, 0, SCALING)  -- tkt
 end
 
 return scene

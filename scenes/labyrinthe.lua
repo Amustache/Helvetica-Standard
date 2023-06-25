@@ -178,8 +178,6 @@ function scene:update(dt)
 end
 
 function scene:draw()
-    love.graphics.draw(current_bg, 0, 0, 0, SCALING)
-    
     for k, v in pairs(hidding_trees) do
         if v.visible then
             love.graphics.draw(v.file, 0, 0, 0, SCALING) 
