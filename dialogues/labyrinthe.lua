@@ -3,7 +3,7 @@ local Ero = require('libs.erogodic')
 local script = Ero(function()
   name ""
   avatar ""
-  background "placeholders/labyrinthe.png"
+  background "img/labyrinthe.png"
 
   name ""
   msg "Pour te déplacer dans le labyrinthe, utilise les flèches de ton clavier."
