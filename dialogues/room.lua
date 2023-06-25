@@ -3,7 +3,7 @@ local Ero = require('libs.erogodic')
 local script = Ero(function()
     name ""
     avatar ""
-    background "img/bedroom_1.png"
+    background "img/bedroom_1__4.png"
 
     name "Megan"
     msg "...-- ...-- ..."
