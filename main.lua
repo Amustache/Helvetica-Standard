@@ -1,5 +1,5 @@
 -- Debug
-START_SCENE = "phone_win"
+START_SCENE = "intro"
 
 -- Load scenes and start with scene room
 local SceneryInit = require("libs.scenery")
@@ -32,6 +32,7 @@ fsm = machine.create({
     callbacks = {
         -- callback = function(self, event, from, to) end,
         onstatechange = function(self, event, from, to)
+            print("## Current state: " .. to)
             if transition == "" then
                 scenery.setScene(to)
             end 
